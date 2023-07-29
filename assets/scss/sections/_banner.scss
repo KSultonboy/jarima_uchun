@@ -1,0 +1,78 @@
+.banner{
+    position: relative;
+    
+
+    &_row{
+        @include flex(start,space-between);
+        gap: 31px;
+        transform: translateY(-30%);
+
+        @include media(1120){
+        transform: translateY(-10%);
+
+        }
+
+        @include media(1120){
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &_panel{
+        position: relative;
+        @include flex(center,start);
+        flex-direction: column;
+        gap: 20px;
+        background: #FFF;
+        box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.10);
+        padding: 40px;
+
+
+        &_title{
+            color: #2C2C2C;
+            font-size: 26px;
+            font-family: $mainT2;
+            font-weight: 400;
+
+            
+           @include media(375){
+            text-align: center;
+           }
+        }
+
+
+        &_subtitle{
+            color: #656363;
+            text-align: center;
+            font-size: 26px;
+            font-family: $mainT2;
+            font-weight: 400;
+            line-height: 26px;
+
+
+            &_sub{
+                color: #000;
+                text-align: center;
+                font-family: Open Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+
+        
+    }
+
+    &_marked{
+        color: #BC9060;
+
+        &_marked{
+            color: #d67e34;
+        }
+    }
+
+}
+
+

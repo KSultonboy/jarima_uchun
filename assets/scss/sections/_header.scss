@@ -1,0 +1,232 @@
+.header{
+    position: relative;
+    min-height: 100vh;
+    // bottom: 0;
+    // background-image: url(/images/hero\ image.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 100vh;
+
+    &_bg{ 
+        position:absolute; 
+        width: 100%; 
+        height: 100%; 
+        top: 0; 
+        left: 0; 
+        z-index: -1;
+    } 
+ 
+    &_image{ 
+        width: 100%; 
+        height: 100%; 
+ 
+        & img{ 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        } 
+ 
+    }
+
+
+    &_info{
+        @include flex(center,space-between);
+        @include adaptive-value('padding-top', 55,20);
+
+      
+
+        &_content{
+            @include flex(center,center);
+            gap: 35px;
+            
+            @include media(650){
+                display: none;
+            }
+    
+
+        }
+    }
+
+
+    &_link{
+        color: #FFF;
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-size: 14px;
+        font-family:$mainT1 ;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            color: $primary;
+        }
+
+
+        &_link{
+
+            @include media(650){
+                display: none;
+            }
+
+            &_mobile{
+                display: none;
+
+                @include media(650){
+                    display: block;
+                }
+            }
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+
+    &_burger{
+        display: none;
+
+        @include media(650){
+            display: block;
+        }
+    }
+
+
+
+    &_desc{
+        @include flex(center,start);
+        gap: 8px;
+    }
+
+    &_line{
+        width: 61px;
+        height: 2px;
+        background-color: $white;
+
+        @include media(360){
+            display: none;
+        }
+    }
+
+    &_subtitle{
+        color: #FFF;
+        font-family: $mainT1;
+        font-weight: 400;
+        @include adaptive-value('font-size',18,15);
+
+        @include media(360){
+            line-height: 50px;
+        }
+
+    }
+
+    
+
+    &_content{
+        position: relative;
+        flex:  1 1 auto;
+        @include flex(start,center);
+        flex-direction: column;
+        margin-top: 30%;
+
+        @include media(1000){
+            @include flex(center,center);
+ 
+        }
+        
+
+        &_row{
+            @include flex(center,center);
+            flex-direction: column;
+            gap: 55px;
+
+            @include media(360){
+                gap: 25px;
+            }
+
+        }
+    }
+
+    &_icon{
+        border-right:1px solid $white; 
+        padding: 15px;
+
+
+        @include media(940){
+            display:none;
+        }
+    }
+
+    &_navbar{
+        display: flex;
+        gap: 23px;
+
+    }
+
+    &_title_small{
+        color: #D67E35;
+        font-family: $mainT2;
+        font-weight: 400;
+        @include adaptive-value('font-size',50,30);
+
+        @include media(360){
+            line-height: 50px;
+        }
+    }
+
+    &_title{
+        color: #D67E35;
+        font-family: $mainT2;
+        font-weight: 400;
+        @include adaptive-value('font-size',80,40);
+
+        @include media(360){
+            line-height: 50px;
+        }
+
+    }
+
+    
+
+    &_contact{
+        @include flex(center,start);
+        gap: 45px;
+
+
+       
+
+
+        &_info{
+        @include flex(center,start);
+        gap: 10px;
+
+        }
+
+        &_txt{
+            color: #FFF;
+            font-size: 18px;
+            font-family:  $mainT1;
+            font-weight: 700;
+        }
+
+        &_text{
+            color: #FFF;
+            font-size: 14px;
+            font-family:$mainT1;
+            font-weight: 400;
+        }
+
+
+        &_button{
+            padding: 14px 19px;
+            background-color:#FF7400;
+            border: none;
+
+        }
+
+        &_con{
+
+            @include media(940){
+                display:none;
+            }
+        }
+
+    }
+}

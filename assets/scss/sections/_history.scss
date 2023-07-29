@@ -1,0 +1,103 @@
+.history{
+    margin-top: 120px;
+
+    &_row{
+        width: 100%;
+        @include flex(center,space-between);
+        gap: 90px;
+
+        @include media(1120){
+            @include flex(center,center);
+            flex-direction: column;
+        }
+    }
+
+    &_image{
+         width: 50%;
+
+         @include media(1120){
+            width: 100%;
+        }
+
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_text{
+        width: 50%;
+        @include flex(center,center);
+        flex-direction: column;
+
+        @include media(1120){
+            width: 100%;
+        }
+
+    }
+
+    &_title{
+        color: #000;
+        font-family: $mainT2;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include adaptive-value('font-size',54,40);
+        margin-bottom: 21px;
+
+        @include media(570){
+            text-align: center;
+        }
+    }
+
+    &_subtitle{
+        color: #656363;
+        text-align: center;
+        font-size: 16px;
+        font-family: $mainT1;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 39px;
+    }
+
+    &_desc{
+
+
+        &_row{
+            @include flex(center,center);
+            gap: 60px;
+
+            @include media(375){
+                flex-direction: column;
+                gap: 30px;
+            }
+
+        }
+    }
+
+    &_number{
+        color: #BC9060;
+        text-align: center;
+        font-size: 40px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+    &_sub{
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+
+}

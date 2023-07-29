@@ -1,0 +1,88 @@
+.menu{
+    margin-bottom: 100px;
+    margin-top: 100px;
+
+    &_row{
+        @include flex(center,center);
+        gap: 140px;
+        flex-direction: column;
+
+        @include media(1230){
+            gap: 40px;
+
+        }
+    }
+
+    &_content{
+
+        &_row{
+           @include flex(start,center);
+           gap: 30px;
+
+
+           @include media(1230){
+            flex-direction: column;
+           }
+
+        }
+    }
+
+    &_icon{
+
+        @include media(750){
+            display: none;
+
+        }
+    }
+
+    &_image{
+
+        @include media(1230){
+            display: none;
+        }
+
+    }
+
+    &_image_small{
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+
+    &_panel{
+        @include flex(center,center);
+        gap: 30px;
+
+
+        @include media(400){
+            flex-direction: column;
+        }
+
+    }
+
+
+    &_desc{
+        @include flex(center,center);
+        gap: 40px;
+
+        @include media(650){
+            gap: 20px;
+        }
+
+        @include media(485){
+            flex-direction: column;
+        }
+
+
+    }
+
+
+    &_txt{
+        color: #000;
+        font-family: Tinos;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

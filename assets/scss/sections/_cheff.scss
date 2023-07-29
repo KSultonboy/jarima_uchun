@@ -1,0 +1,41 @@
+.cheff{
+    margin-bottom: 100px;
+
+    &_row{
+        @include flex(center,center);
+        flex-direction: column;
+        gap: 107px;
+
+        
+    }
+
+    &_photos{
+        @include flex(center,center);
+        gap: 32px;
+        flex-wrap: wrap;
+
+    }
+
+    &_image{
+
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_title{
+        color: #000;
+        font-size: 54px;
+        font-family: $mainT2;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+
+        &_title{
+            color: #fff;
+            padding-bottom: 50px;
+        }
+    }
+}
